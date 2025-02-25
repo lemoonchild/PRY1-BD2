@@ -1,0 +1,101 @@
+provider,category,association_level,start_date,association_terms
+Provider 17,Peripherals,5,2021-06-03,Official Supplier
+Provider 31,PC Components,10,2020-12-13,Limited Partnership
+Provider 26,Networking,10,2017-07-04,Exclusive Distributor
+Provider 84,Networking,9,2024-03-25,Official Supplier
+Provider 53,Networking,9,2017-07-19,Limited Partnership
+Provider 16,Storage,8,2016-02-16,Official Supplier
+Provider 21,Power Supplies,4,2020-11-08,Limited Partnership
+Provider 47,Cooling,4,2023-01-17,Exclusive Distributor
+Provider 58,Storage,6,2017-09-10,Official Supplier
+Provider 37,Gaming,6,2016-08-29,Exclusive Distributor
+Provider 83,Storage,4,2022-07-31,Exclusive Distributor
+Provider 43,Peripherals,1,2024-11-12,Official Supplier
+Provider 31,Power Supplies,10,2020-02-20,Exclusive Distributor
+Provider 36,PC Components,5,2022-07-24,Exclusive Distributor
+Provider 50,Cooling,7,2024-04-20,Exclusive Distributor
+Provider 66,Networking,4,2017-03-22,Limited Partnership
+Provider 94,Cooling,1,2024-07-09,Exclusive Distributor
+Provider 45,Peripherals,1,2019-07-30,Limited Partnership
+Provider 44,Storage,8,2021-12-17,Exclusive Distributor
+Provider 80,Cooling,2,2017-07-24,Limited Partnership
+Provider 95,Gaming,2,2024-11-14,Exclusive Distributor
+Provider 57,Networking,4,2021-08-10,Limited Partnership
+Provider 97,Networking,5,2021-09-24,Limited Partnership
+Provider 70,PC Components,2,2015-08-13,Limited Partnership
+Provider 5,Storage,1,2023-12-09,Limited Partnership
+Provider 34,Networking,4,2022-07-08,Limited Partnership
+Provider 44,Networking,9,2024-05-24,Limited Partnership
+Provider 34,Peripherals,6,2021-08-27,Exclusive Distributor
+Provider 14,Audio,9,2023-06-19,Limited Partnership
+Provider 58,PC Components,3,2021-08-03,Exclusive Distributor
+Provider 91,Storage,7,2016-08-04,Exclusive Distributor
+Provider 5,Networking,7,2024-12-13,Exclusive Distributor
+Provider 5,Networking,1,2024-12-15,Official Supplier
+Provider 11,Cooling,7,2017-10-12,Limited Partnership
+Provider 28,PC Components,7,2020-09-16,Official Supplier
+Provider 40,Audio,9,2015-10-02,Exclusive Distributor
+Provider 47,Cooling,7,2018-02-04,Official Supplier
+Provider 52,Audio,7,2024-05-27,Exclusive Distributor
+Provider 100,Power Supplies,1,2021-12-18,Exclusive Distributor
+Provider 91,PC Components,10,2017-04-01,Exclusive Distributor
+Provider 47,Power Supplies,4,2017-07-21,Official Supplier
+Provider 48,Audio,10,2015-07-07,Exclusive Distributor
+Provider 5,Networking,10,2015-05-23,Official Supplier
+Provider 76,Gaming,1,2018-01-15,Exclusive Distributor
+Provider 56,Gaming,9,2015-04-21,Exclusive Distributor
+Provider 95,Power Supplies,1,2020-02-21,Official Supplier
+Provider 60,Peripherals,2,2021-10-05,Exclusive Distributor
+Provider 91,Storage,2,2016-07-16,Exclusive Distributor
+Provider 43,PC Components,9,2015-09-30,Official Supplier
+Provider 37,PC Components,8,2022-04-11,Official Supplier
+Provider 49,PC Components,8,2021-10-13,Official Supplier
+Provider 2,Networking,6,2019-03-17,Official Supplier
+Provider 23,Storage,1,2019-04-11,Official Supplier
+Provider 89,Gaming,3,2016-02-10,Exclusive Distributor
+Provider 44,Storage,9,2024-06-15,Official Supplier
+Provider 92,Gaming,3,2015-11-08,Exclusive Distributor
+Provider 11,Gaming,9,2021-06-06,Official Supplier
+Provider 44,Storage,10,2017-08-24,Official Supplier
+Provider 68,PC Components,9,2019-08-22,Exclusive Distributor
+Provider 25,PC Components,3,2024-10-09,Official Supplier
+Provider 81,Storage,6,2023-03-02,Limited Partnership
+Provider 35,Cooling,5,2015-12-30,Official Supplier
+Provider 67,Peripherals,5,2015-05-13,Official Supplier
+Provider 34,Networking,8,2019-01-20,Official Supplier
+Provider 32,Peripherals,5,2015-10-10,Limited Partnership
+Provider 4,Cooling,10,2021-11-17,Official Supplier
+Provider 23,Power Supplies,3,2019-06-08,Official Supplier
+Provider 81,Audio,7,2017-11-12,Exclusive Distributor
+Provider 21,Storage,5,2021-08-13,Exclusive Distributor
+Provider 2,Networking,5,2021-08-25,Exclusive Distributor
+Provider 17,Power Supplies,9,2016-06-28,Official Supplier
+Provider 99,Cooling,7,2015-10-31,Limited Partnership
+Provider 88,Peripherals,1,2016-10-20,Official Supplier
+Provider 22,Peripherals,6,2015-06-15,Exclusive Distributor
+Provider 15,PC Components,2,2022-10-10,Official Supplier
+Provider 45,Gaming,8,2022-11-18,Official Supplier
+Provider 88,Audio,7,2018-02-19,Exclusive Distributor
+Provider 67,Audio,10,2021-10-25,Official Supplier
+Provider 17,Peripherals,2,2022-01-02,Exclusive Distributor
+Provider 17,Peripherals,8,2017-11-27,Official Supplier
+Provider 17,Storage,7,2017-01-21,Limited Partnership
+Provider 65,Networking,1,2016-10-30,Limited Partnership
+Provider 15,Power Supplies,4,2018-01-09,Exclusive Distributor
+Provider 62,Networking,3,2019-07-23,Limited Partnership
+Provider 82,Peripherals,1,2017-01-08,Official Supplier
+Provider 92,Storage,9,2022-05-27,Official Supplier
+Provider 31,Gaming,4,2016-06-14,Exclusive Distributor
+Provider 8,Cooling,8,2023-12-28,Official Supplier
+Provider 8,Storage,8,2017-11-29,Official Supplier
+Provider 22,Power Supplies,8,2020-07-14,Exclusive Distributor
+Provider 31,Cooling,5,2021-01-22,Exclusive Distributor
+Provider 18,PC Components,10,2017-12-08,Official Supplier
+Provider 36,Storage,5,2017-09-06,Exclusive Distributor
+Provider 83,Gaming,10,2022-09-16,Official Supplier
+Provider 73,Peripherals,5,2018-04-16,Official Supplier
+Provider 46,PC Components,4,2018-11-28,Official Supplier
+Provider 46,Gaming,4,2018-01-15,Official Supplier
+Provider 21,Cooling,1,2016-11-06,Exclusive Distributor
+Provider 64,PC Components,8,2019-12-20,Exclusive Distributor
+Provider 82,Networking,2,2018-01-13,Limited Partnership

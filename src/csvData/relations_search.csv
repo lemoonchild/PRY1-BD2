@@ -1,0 +1,101 @@
+user,component,keyword,search_date,results_count
+User 64,Component 11,Gaming,2020-01-03,10
+User 37,Component 74,Budget,2018-10-20,11
+User 60,Component 17,High Performance,2023-03-09,68
+User 59,Component 52,Budget,2022-06-02,72
+User 84,Component 15,Gaming,2015-05-01,39
+User 14,Component 5,Budget,2017-01-18,50
+User 3,Component 41,Budget,2019-10-30,100
+User 94,Component 10,Budget,2017-11-25,16
+User 3,Component 64,High Performance,2023-09-29,21
+User 36,Component 41,Budget,2022-06-04,72
+User 44,Component 84,Gaming,2021-08-02,90
+User 90,Component 71,Budget,2017-11-06,37
+User 51,Component 77,Budget,2015-05-05,13
+User 55,Component 10,High Performance,2016-02-03,79
+User 87,Component 23,High Performance,2015-06-08,10
+User 49,Component 33,High Performance,2023-09-25,5
+User 3,Component 23,High Performance,2016-02-09,93
+User 38,Component 22,High Performance,2015-07-20,63
+User 12,Component 75,Gaming,2023-06-24,80
+User 57,Component 95,High Performance,2015-11-24,76
+User 9,Component 38,Budget,2016-06-04,53
+User 84,Component 69,Gaming,2022-08-22,62
+User 62,Component 100,Gaming,2016-10-20,78
+User 63,Component 96,High Performance,2017-04-11,56
+User 26,Component 19,High Performance,2022-04-26,53
+User 19,Component 97,Gaming,2018-10-14,67
+User 2,Component 38,Gaming,2022-11-02,72
+User 93,Component 96,High Performance,2022-07-10,62
+User 22,Component 25,Budget,2019-10-13,76
+User 10,Component 37,Gaming,2021-01-23,81
+User 7,Component 74,Gaming,2016-07-26,63
+User 87,Component 22,Budget,2021-03-07,55
+User 46,Component 100,Gaming,2024-03-02,98
+User 54,Component 32,Gaming,2021-04-08,31
+User 1,Component 52,Budget,2024-04-28,65
+User 50,Component 36,Budget,2018-04-30,71
+User 11,Component 87,High Performance,2023-11-30,25
+User 100,Component 48,Gaming,2018-02-02,43
+User 99,Component 93,Gaming,2024-11-20,90
+User 31,Component 93,Gaming,2018-10-22,91
+User 10,Component 89,High Performance,2019-08-11,12
+User 75,Component 67,High Performance,2018-05-21,61
+User 39,Component 94,Budget,2024-06-17,7
+User 75,Component 28,Budget,2020-03-14,96
+User 70,Component 60,Budget,2023-11-26,77
+User 55,Component 24,High Performance,2017-09-19,13
+User 92,Component 2,Budget,2015-05-08,35
+User 4,Component 58,High Performance,2024-02-21,22
+User 17,Component 21,Gaming,2023-06-24,81
+User 88,Component 97,Gaming,2020-09-13,91
+User 70,Component 71,High Performance,2020-11-22,45
+User 61,Component 6,High Performance,2024-07-07,57
+User 31,Component 39,Budget,2015-11-10,50
+User 98,Component 3,Gaming,2022-10-09,37
+User 52,Component 30,Budget,2021-10-30,79
+User 83,Component 33,High Performance,2019-06-06,75
+User 55,Component 23,Gaming,2019-01-15,16
+User 97,Component 33,Budget,2022-09-21,91
+User 83,Component 72,High Performance,2023-12-07,65
+User 57,Component 4,Gaming,2021-11-27,96
+User 68,Component 68,Gaming,2015-05-17,22
+User 59,Component 19,Budget,2022-10-11,75
+User 40,Component 93,High Performance,2024-11-04,99
+User 28,Component 83,High Performance,2022-03-20,58
+User 5,Component 27,Budget,2018-08-17,43
+User 91,Component 94,Gaming,2018-01-08,5
+User 87,Component 89,Gaming,2022-04-28,14
+User 50,Component 62,Gaming,2018-06-29,16
+User 58,Component 35,High Performance,2019-01-29,86
+User 55,Component 85,Gaming,2016-01-28,89
+User 32,Component 38,High Performance,2024-04-20,66
+User 38,Component 70,Budget,2018-06-30,38
+User 100,Component 87,Gaming,2017-03-02,51
+User 83,Component 89,Budget,2021-11-20,38
+User 92,Component 18,Budget,2019-09-16,30
+User 79,Component 10,Gaming,2017-01-10,80
+User 50,Component 45,Budget,2015-09-16,81
+User 84,Component 78,Budget,2018-05-27,70
+User 64,Component 34,Gaming,2020-05-23,50
+User 40,Component 6,High Performance,2018-12-24,24
+User 11,Component 25,Budget,2018-03-16,38
+User 29,Component 18,Gaming,2024-08-21,63
+User 66,Component 60,Budget,2024-07-20,31
+User 2,Component 75,High Performance,2022-08-03,83
+User 87,Component 48,High Performance,2018-03-05,30
+User 99,Component 92,Gaming,2016-10-25,68
+User 27,Component 24,High Performance,2023-03-12,34
+User 98,Component 40,Budget,2020-11-24,40
+User 15,Component 14,Budget,2015-06-24,74
+User 67,Component 53,Gaming,2022-05-29,66
+User 81,Component 5,Gaming,2017-09-04,84
+User 84,Component 68,High Performance,2016-02-26,14
+User 39,Component 81,Budget,2017-09-19,61
+User 37,Component 66,Gaming,2021-12-13,32
+User 86,Component 43,High Performance,2019-04-05,56
+User 35,Component 45,High Performance,2015-04-24,73
+User 56,Component 71,Budget,2017-10-30,97
+User 52,Component 99,Budget,2020-09-27,49
+User 37,Component 88,Budget,2024-04-24,24
+User 76,Component 92,High Performance,2016-12-06,80

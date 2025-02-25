@@ -1,0 +1,101 @@
+provider,user,discount_percentage,promotion_date,promotion_type
+Provider 17,User 64,6.06,2022-04-14,Seasonal
+Provider 31,User 37,40.81,2017-09-16,Flash Sale
+Provider 26,User 60,35.58,2024-01-13,Clearance
+Provider 84,User 59,9.4,2015-04-10,Seasonal
+Provider 53,User 84,14.85,2015-08-26,Flash Sale
+Provider 16,User 14,33.85,2023-03-20,Clearance
+Provider 21,User 3,33.77,2024-06-25,Clearance
+Provider 47,User 94,27.0,2017-04-08,Flash Sale
+Provider 58,User 3,16.22,2015-11-29,Clearance
+Provider 37,User 36,16.15,2020-11-12,Seasonal
+Provider 83,User 44,40.02,2018-10-09,Clearance
+Provider 43,User 90,37.86,2016-10-27,Seasonal
+Provider 31,User 51,34.25,2023-07-30,Seasonal
+Provider 36,User 55,43.04,2021-02-24,Clearance
+Provider 50,User 87,19.91,2019-10-29,Clearance
+Provider 66,User 49,36.35,2017-05-23,Clearance
+Provider 94,User 3,34.93,2021-12-27,Seasonal
+Provider 45,User 38,49.8,2015-02-23,Flash Sale
+Provider 44,User 12,11.96,2019-10-19,Clearance
+Provider 80,User 57,7.37,2022-02-23,Clearance
+Provider 95,User 9,30.15,2018-05-16,Seasonal
+Provider 57,User 84,27.43,2020-02-11,Clearance
+Provider 97,User 62,27.13,2016-08-16,Seasonal
+Provider 70,User 63,34.34,2022-01-17,Seasonal
+Provider 5,User 26,29.65,2020-04-02,Flash Sale
+Provider 34,User 19,47.62,2024-08-01,Seasonal
+Provider 44,User 2,15.09,2015-06-04,Flash Sale
+Provider 34,User 93,41.78,2024-09-05,Seasonal
+Provider 14,User 22,49.46,2016-11-14,Seasonal
+Provider 58,User 10,23.71,2024-04-25,Clearance
+Provider 91,User 7,11.18,2023-11-12,Flash Sale
+Provider 5,User 87,29.73,2022-01-14,Seasonal
+Provider 5,User 46,40.05,2023-04-07,Flash Sale
+Provider 11,User 54,47.31,2022-02-07,Clearance
+Provider 28,User 1,22.21,2021-06-06,Clearance
+Provider 40,User 50,22.01,2022-03-09,Flash Sale
+Provider 47,User 11,34.17,2017-09-18,Clearance
+Provider 52,User 100,28.75,2015-10-03,Clearance
+Provider 100,User 99,9.85,2020-01-08,Seasonal
+Provider 91,User 31,35.1,2023-07-31,Flash Sale
+Provider 47,User 10,44.02,2015-12-20,Flash Sale
+Provider 48,User 75,12.41,2022-03-25,Clearance
+Provider 5,User 39,39.1,2023-02-12,Seasonal
+Provider 76,User 75,25.57,2020-12-29,Clearance
+Provider 56,User 70,21.69,2016-06-07,Seasonal
+Provider 95,User 55,20.88,2021-05-21,Seasonal
+Provider 60,User 92,17.73,2024-08-29,Seasonal
+Provider 91,User 4,7.32,2018-05-03,Clearance
+Provider 43,User 17,49.21,2023-01-27,Seasonal
+Provider 37,User 88,27.93,2018-08-19,Clearance
+Provider 49,User 70,42.37,2016-10-31,Flash Sale
+Provider 2,User 61,11.06,2015-01-20,Seasonal
+Provider 23,User 31,33.79,2022-04-15,Clearance
+Provider 89,User 98,12.37,2021-10-21,Clearance
+Provider 44,User 52,9.16,2019-06-06,Seasonal
+Provider 92,User 83,42.94,2016-08-19,Clearance
+Provider 11,User 55,32.77,2017-04-30,Flash Sale
+Provider 44,User 97,13.92,2017-07-08,Seasonal
+Provider 68,User 83,15.95,2018-03-16,Flash Sale
+Provider 25,User 57,22.65,2024-04-01,Seasonal
+Provider 81,User 68,42.17,2021-09-16,Seasonal
+Provider 35,User 59,13.26,2015-05-13,Seasonal
+Provider 67,User 40,40.42,2019-10-31,Seasonal
+Provider 34,User 28,21.21,2024-12-10,Seasonal
+Provider 32,User 5,16.49,2022-07-28,Seasonal
+Provider 4,User 91,26.85,2022-10-06,Seasonal
+Provider 23,User 87,40.68,2017-06-26,Clearance
+Provider 81,User 50,12.96,2015-10-12,Clearance
+Provider 21,User 58,18.05,2016-07-10,Flash Sale
+Provider 2,User 55,25.25,2017-02-28,Seasonal
+Provider 17,User 32,39.02,2016-08-01,Seasonal
+Provider 99,User 38,29.87,2022-08-17,Seasonal
+Provider 88,User 100,27.32,2018-04-01,Flash Sale
+Provider 22,User 83,37.0,2020-09-07,Clearance
+Provider 15,User 92,19.93,2015-12-18,Flash Sale
+Provider 45,User 79,42.42,2019-05-02,Flash Sale
+Provider 88,User 50,6.36,2015-03-23,Flash Sale
+Provider 67,User 84,13.32,2024-02-08,Flash Sale
+Provider 17,User 64,37.22,2018-03-13,Clearance
+Provider 17,User 40,46.8,2024-11-22,Flash Sale
+Provider 17,User 11,13.65,2024-07-27,Clearance
+Provider 65,User 29,49.67,2023-05-07,Clearance
+Provider 15,User 66,10.11,2024-03-03,Clearance
+Provider 62,User 2,47.11,2018-06-16,Flash Sale
+Provider 82,User 87,46.48,2022-10-18,Seasonal
+Provider 92,User 99,38.65,2022-03-28,Flash Sale
+Provider 31,User 27,14.87,2018-07-04,Seasonal
+Provider 8,User 98,49.81,2015-07-04,Clearance
+Provider 8,User 15,49.89,2018-03-26,Clearance
+Provider 22,User 67,33.49,2018-02-02,Seasonal
+Provider 31,User 81,26.87,2021-01-10,Seasonal
+Provider 18,User 84,49.96,2023-02-17,Seasonal
+Provider 36,User 39,13.74,2022-05-20,Seasonal
+Provider 83,User 37,9.99,2016-12-18,Flash Sale
+Provider 73,User 86,37.86,2016-09-27,Clearance
+Provider 46,User 35,8.99,2024-08-03,Flash Sale
+Provider 46,User 56,19.71,2019-06-17,Clearance
+Provider 21,User 52,26.15,2017-09-21,Flash Sale
+Provider 64,User 37,24.64,2022-05-26,Clearance
+Provider 82,User 76,11.18,2019-08-09,Clearance
