@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 import pandas as pd
 import os
 
-# Cargar las credenciales desde .env
 load_dotenv()
 
 NEO4J_URI = os.getenv("NEO4J_URI")
@@ -19,7 +18,6 @@ driver = get_neo4j_driver()
 # Diccionario para almacenar logs
 load_report = {"nodes": {}, "relationships": {}}
 
-### **1️⃣ Cargar NODOS y registrar el resultado**
 def load_nodes_from_csv(file_path, node_label):
     df = pd.read_csv(file_path)
 
@@ -40,7 +38,6 @@ def load_nodes_from_csv(file_path, node_label):
     load_report["nodes"][node_label] = loaded_count
     print(f"✅ {loaded_count} nodos de {node_label} cargados correctamente.")
 
-### **2️⃣ Cargar RELACIONES y registrar el resultado**
 def load_relationships_from_csv(file_path, relation_type, from_label, to_label, from_key, to_key):
     df = pd.read_csv(file_path)
     
@@ -71,7 +68,6 @@ def load_relationships_from_csv(file_path, relation_type, from_label, to_label, 
     load_report["relationships"][relation_type] = successful_loads
     print(f"✅ {successful_loads} relaciones {relation_type} cargadas correctamente.")
 
-### **3️⃣ Cargar TODOS los NODOS**
 def load_all_nodes():
     base_path = "src/csvData"
     node_files = {
@@ -90,7 +86,6 @@ def load_all_nodes():
             load_report["nodes"][label] = "❌ No encontrado"
             print(f"⚠️ El archivo {file} no existe.")
 
-### **4️⃣ Cargar TODAS las RELACIONES**
 def load_all_relationships():
     base_path = "src/csvData"
     relation_files = {
@@ -114,20 +109,19 @@ def load_all_relationships():
             load_report["relationships"][relation_type] = "❌ No encontrado"
             print(f"⚠️ Archivo {file} no encontrado.")
 
-### **5️⃣ Ejecutar Carga de Datos y Mostrar Reporte**
 if __name__ == "__main__":
     print("Cargando nodos...")
     load_all_nodes()
     print("\nCargando relaciones...")
     load_all_relationships()
     
-    print("\n📊 **Reporte de Carga**")
-    print("📌 **NODOS:**")
+    print("\n**Reporte de Carga**")
+    print("**NODOS:**")
     for node, count in load_report["nodes"].items():
         print(f"  - {node}: {count}")
 
-    print("\n📌 **RELACIONES:**")
+    print("\n**RELACIONES:**")
     for relation, count in load_report["relationships"].items():
         print(f"  - {relation}: {count}")
 
-    print("\n✅ ¡Carga de datos completada!")
+    print("\n✅ Carga de datos completada")
