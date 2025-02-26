@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.endpoints.get import getNodes
+from api.endpoints.post import createNodes
 import uvicorn
 
 app = FastAPI(title="Neo4j API", description="API para gestionar nodos y relaciones en Neo4j.")
@@ -14,6 +15,9 @@ app.add_middleware(
 )
 
 app.include_router(getNodes.router, prefix="/nodes", tags=["Nodes"])
+
+
+app.include_router(createNodes.router, prefix="/nodes", tags=["Nodes"])
 
 @app.get("/")
 def read_root():
