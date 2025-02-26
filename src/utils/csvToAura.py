@@ -7,7 +7,7 @@ import os
 load_dotenv()
 
 NEO4J_URI = os.getenv("NEO4J_URI")
-NEO4J_USER = os.getenv("NEO4J_USER")
+NEO4J_USER = os.getenv("NEO4J_USERNAME")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 # Conexión a Neo4j
@@ -97,12 +97,12 @@ def load_all_relationships():
         "relations_purchase.csv": ("User", "Component", "PURCHASED", "name", "name"),
         "relations_categorize.csv": ("Component", "Category", "CATEGORIZED", "name", "name"),
         "relations_supply.csv": ("Provider", "Component", "SUPPLIES", "name", "name"),
-        "relations_review.csv": ("Review", "Component", "REVIEWS", "name", "name"),
+        "relations_review.csv": ("Review", "Component", "REVIEWS", "title", "name"),
         "relations_promote.csv": ("Provider", "User", "PROMOTES", "name", "name"),
         "relations_associate.csv": ("Provider", "Category", "ASSOCIATED_WITH", "name", "name"),
         "relations_search.csv": ("User", "Component", "SEARCHED", "name", "name"),
         "relations_wishlist.csv": ("User", "Component", "WANTS", "name", "name"),
-        "relations_write.csv": ("User", "Review", "WRITES", "name", "name"),
+        "relations_write.csv": ("User", "Review", "WRITES", "name", "title"),
         "relations_complement.csv": ("Component", "Component", "COMPLEMENTS", "name", "name")
     }
 

@@ -477,7 +477,7 @@ while generated < num_relations:
 purchase_df = pd.DataFrame(purchase_data, columns=["user", "component", "purchase_date", "quantity", "total_price", "payment_method"])
 categorize_df = pd.DataFrame(categorize_data, columns=["component", "category", "assign_date", "relevance", "position"])
 supply_df = pd.DataFrame(supply_data, columns=["provider", "component", "shipping_mode", "payment_terms", "stock"])
-review_df_rel = pd.DataFrame(review_data, columns=["review", "component", "purchase_location", "satisfaction", "detail_level"])
+review_df_rel = pd.DataFrame(review_rel_data, columns=["review", "component", "purchase_location", "satisfaction", "detail_level"])
 promote_df = pd.DataFrame(promote_data, columns=["provider", "user", "discount_percentage", "promotion_date", "promotion_type"])
 associate_df = pd.DataFrame(associate_data, columns=["provider", "category", "association_level", "start_date", "association_terms"])
 search_df = pd.DataFrame(search_data, columns=["user", "component", "keyword", "search_date", "results_count"])
