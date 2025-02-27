@@ -14,7 +14,7 @@ LABEL_KEY_MAP = {
     "Review": "title"  # Solo los nodos de Review usan 'title' en vez de 'name'
 }
 
-# 📌 Modelo Pydantic para la creación de relaciones con propiedades
+# Modelo Pydantic para la creación de relaciones con propiedades
 class RelationshipWithProperties(BaseModel):
     from_label: str  # Label del nodo origen
     from_value: str  # Valor de la clave del nodo origen
