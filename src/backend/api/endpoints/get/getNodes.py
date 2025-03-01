@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, Query
-from typing import Optional, List
+from typing import Optional, Dict, Any
 from utils.dbConnection import get_neo4j_driver
 
 router = APIRouter()
@@ -41,6 +41,93 @@ def get_nodes(
     return nodes
 
 
+def get_numeric_properties(label: str) -> list:
+    """
+    Extrae propiedades numéricas reales (int o float) de un nodo de prueba.
+    Si un label no tiene nodos, lanza un error 404.
+    """
+    query = f"MATCH (n:{label}) RETURN n LIMIT 1"
+
+    with driver.session() as session:
+        result = session.run(query)
+        record = result.single()
+
+        if not record:
+            raise HTTPException(status_code=404, detail=f"No hay nodos con label '{label}'")
+
+        node = record["n"]
+        numeric_props = []
+
+        for key, value in dict(node).items():
+            if isinstance(value, (int, float)) and not isinstance(value, bool):
+                numeric_props.append(key)
+
+        return numeric_props
+
+
+@router.get("/aggregates", tags=["nodes"])
+def get_node_aggregates(label: Optional[str] = None) -> Dict[str, Any]:
+    """
+    Devuelve:
+    - Total de nodos.
+    - Si hay label, devuelve promedio (avg), media (median) y moda (mode) de propiedades numéricas.
+    """
+
+    if label:
+        numeric_props = get_numeric_properties(label)
+
+        if not numeric_props:
+            return {"total_nodes": 0, "message": "No hay propiedades numéricas en este tipo de nodo."}
+
+        # Bloques dinámicos para cada métrica
+        avg_part = ", ".join([f"avg(n.{prop}) AS avg_{prop}" for prop in numeric_props])
+        median_part = ", ".join([f"percentileCont(n.{prop}, 0.5) AS median_{prop}" for prop in numeric_props])
+
+        # Para moda, hacemos un truco: Contamos frecuencia y seleccionamos el más común
+        mode_part_list = []
+        for prop in numeric_props:
+            mode_query = f"""
+            OPTIONAL MATCH (n:{label})
+            WITH n.{prop} AS value
+            WHERE value IS NOT NULL
+            RETURN value, count(*) AS frequency
+            ORDER BY frequency DESC
+            LIMIT 1
+            """
+            mode_part_list.append((prop, mode_query))
+
+        # Consulta principal para count, avg y median
+        query = f"""
+        MATCH (n:{label})
+        RETURN count(n) AS total, {avg_part}, {median_part}
+        """
+
+        response = {}
+
+        with driver.session() as session:
+            result = session.run(query)
+            record = result.single()
+
+            response["total_nodes"] = record["total"]
+            for prop in numeric_props:
+                response[f"avg_{prop}"] = record[f"avg_{prop}"]
+                response[f"median_{prop}"] = record[f"median_{prop}"]
+
+            # Ejecutamos cada consulta de moda individualmente
+            for prop, mode_query in mode_part_list:
+                mode_result = session.run(mode_query)
+                mode_record = mode_result.single()
+                response[f"mode_{prop}"] = mode_record["value"] if mode_record else None
+
+        return response
+
+    else:
+        query = "MATCH (n) RETURN count(n) AS total"
+        with driver.session() as session:
+            result = session.run(query)
+            record = result.single()
+            return {"total_nodes": record["total"]}
+
 @router.get("/{name}", tags=["nodes"])
 def get_node_by_name(name: str, label: Optional[str] = Query(None, description="Etiqueta del nodo, si se conoce")):
     """
@@ -59,21 +146,3 @@ def get_node_by_name(name: str, label: Optional[str] = Query(None, description="
             raise HTTPException(status_code=404, detail="Node not found")
         return record["n"]
     
-@router.get("/aggregates", tags=["nodes"])
-def get_node_aggregates(label: Optional[str] = None):
-    """
-    Retorna datos agregados de nodos, por ejemplo:
-      - Conteo total de nodos.
-      - Conteo de nodos por label.
-      - Promedios o sumas de propiedades numéricas.
-    """
-    if label:
-        query = f"MATCH (n:{label}) RETURN count(n) AS total"
-    else:
-        query = "MATCH (n) RETURN count(n) AS total"
-    
-    with driver.session() as session:
-        result = session.run(query)
-        total = result.single()["total"]
-    
-    return {"total_nodes": total}
