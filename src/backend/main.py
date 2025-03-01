@@ -2,9 +2,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.endpoints.get import getNodes
 from api.endpoints.post import createNodes, createRelationships
-from api.endpoints.patch import patchNodes, patchRelationshipProp
+from api.endpoints.patch import patchNodes
 from api.endpoints.delete import deleteNodes, deleteRelations
-
+from api.endpoints.patch import putPropRelationship
+from api.endpoints.patch import updatePropRelationship
 import uvicorn
 
 app = FastAPI(title="Neo4j API", description="API para gestionar nodos y relaciones en Neo4j.")
@@ -25,7 +26,9 @@ app.include_router(createRelationships.router, prefix="/relationships", tags=["R
 
 app.include_router(patchNodes.router, prefix="/nodes", tags=["Nodes"])
 
-app.include_router(patchRelationshipProp.router, prefix="/relationships", tags=["Relationships"])  
+app.include_router(putPropRelationship.router, prefix="/relationships", tags=["Relationships"])  
+
+app.include_router(updatePropRelationship.router, prefix="/relationships", tags=["Relationships"])  
 
 app.include_router(deleteNodes.router, prefix="/nodes", tags=["Nodes"])
 
