@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.endpoints.get import getNodes
 from api.endpoints.post import createNodes, createRelationships
-from api.endpoints.patch import patchNodes
+from api.endpoints.patch import patchNodes, patchRelationshipProp
 from api.endpoints.delete import deleteNodes, deleteRelations
 
 import uvicorn
@@ -24,6 +24,8 @@ app.include_router(createNodes.router, prefix="/nodes", tags=["Nodes"])
 app.include_router(createRelationships.router, prefix="/relationships", tags=["Relationships"])
 
 app.include_router(patchNodes.router, prefix="/nodes", tags=["Nodes"])
+
+app.include_router(patchRelationshipProp.router, prefix="/relationships", tags=["Relationships"])  
 
 app.include_router(deleteNodes.router, prefix="/nodes", tags=["Nodes"])
 
