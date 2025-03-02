@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.endpoints.get import getNodes
+from api.endpoints.get import getRelationship
 from api.endpoints.post import createNodes, createRelationships
 from api.endpoints.patch import patchNodes, putPropRelationship, updatePropRelationship
 from api.endpoints.delete import deleteNodes, deleteRelations, deletePropRelationship
@@ -18,6 +19,8 @@ app.add_middleware(
 )
 
 app.include_router(getNodes.router, prefix="/nodes", tags=["Nodes"])
+
+app.include_router(getRelationship.router, prefix="/relationships", tags=["Relationships"])
 
 app.include_router(createNodes.router, prefix="/nodes", tags=["Nodes"])
 

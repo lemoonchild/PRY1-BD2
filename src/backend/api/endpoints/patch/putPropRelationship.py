@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Any
 from utils.dbConnection import get_neo4j_driver
 
 router = APIRouter()
@@ -19,7 +19,7 @@ class PutMultipleRelationshipsProperties(BaseModel):
     to_label: str
     relationship_type: str
     pairs: List[Tuple[str, str]]
-    properties: Dict[str, str]
+    properties: Dict[str, Any]
 
 def get_identifier_key(label: str) -> str:
     return "title" if label == "Review" else "name"
