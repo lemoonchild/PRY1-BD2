@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, Query
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 from utils.dbConnection import get_neo4j_driver
 
 router = APIRouter()
@@ -64,6 +64,26 @@ def get_numeric_properties(label: str) -> list:
 
         return numeric_props
 
+@router.get("/batch", tags=["nodes"])
+def get_nodes_batch(
+    label: str,
+    prop: str,
+    values: List[str] = Query(..., description="Lista de valores a buscar")
+):
+    """
+    Retorna una lista de nodos que coincidan con la label y con alguno de los valores en la propiedad indicada.
+    """
+    query = f"""
+    MATCH (n:{label})
+    WHERE n.{prop} IN $values
+    RETURN n
+    """
+
+    with driver.session() as session:
+        result = session.run(query, values=values)
+        nodes = [record["n"] for record in result]
+
+    return nodes
 
 @router.get("/aggregates", tags=["nodes"])
 def get_node_aggregates(label: Optional[str] = None) -> Dict[str, Any]:
