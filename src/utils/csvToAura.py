@@ -68,8 +68,8 @@ def load_relationships_from_csv(file_path, relation_type, from_label, to_label, 
     load_report["relationships"][relation_type] = successful_loads
     print(f"✅ {successful_loads} relaciones {relation_type} cargadas correctamente.")
 
-def load_all_nodes():
-    base_path = "src/csvData"
+def load_all_nodes(folder):
+    base_path = os.path.join("src", folder)
     node_files = {
         "components.csv": "Component",
         "categories.csv": "Category",
@@ -77,7 +77,6 @@ def load_all_nodes():
         "reviews.csv": "Review",
         "providers.csv": "Provider"
     }
-
     for file, label in node_files.items():
         file_path = os.path.join(base_path, file)
         if os.path.exists(file_path):
@@ -86,8 +85,8 @@ def load_all_nodes():
             load_report["nodes"][label] = "❌ No encontrado"
             print(f"⚠️ El archivo {file} no existe.")
 
-def load_all_relationships():
-    base_path = "src/csvData"
+def load_all_relationships(folder):
+    base_path = os.path.join("src", folder)
     relation_files = {
         "relations_purchase.csv": ("User", "Component", "PURCHASED", "name", "name"),
         "relations_categorize.csv": ("Component", "Category", "CATEGORIZED", "name", "name"),
@@ -100,7 +99,6 @@ def load_all_relationships():
         "relations_write.csv": ("User", "Review", "WRITES", "name", "title"),
         "relations_complement.csv": ("Component", "Component", "COMPLEMENTS", "name", "name")
     }
-
     for file, (from_label, to_label, relation_type, from_key, to_key) in relation_files.items():
         file_path = os.path.join(base_path, file)
         if os.path.exists(file_path):
@@ -110,10 +108,11 @@ def load_all_relationships():
             print(f"⚠️ Archivo {file} no encontrado.")
 
 if __name__ == "__main__":
+    folder = input("Ingresa el nombre del folder en src: ").strip() or "csvData"
     print("Cargando nodos...")
-    load_all_nodes()
+    load_all_nodes(folder)
     print("\nCargando relaciones...")
-    load_all_relationships()
+    load_all_relationships(folder)
     
     print("\n**Reporte de Carga**")
     print("**NODOS:**")

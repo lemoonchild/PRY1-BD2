@@ -2,16 +2,31 @@ import pandas as pd
 import random
 from datetime import datetime, timedelta
 import os
+import ast
 
-# Obtener el directorio base del proyecto (donde se está ejecutando el script)
-base_dir = os.getcwd()  # Ruta absoluta del directorio actual
-csv_dir = os.path.join(base_dir, "src", "csvData")  # Ruta absoluta para los CSVs
+# Definir el directorio para guardar los CSVs
+base_dir = os.getcwd()
+src_dir = os.path.join(base_dir, "src")
+# Nuevo: Solicitar el nombre del subdirectorio (dentro de "src") para guardar los CSVs
+folder_name = input("Ingrese el nombre del directorio (dentro de 'src') para guardar los CSVs: ").strip()
+csv_dir = os.path.join(src_dir, folder_name)
+if not os.path.exists(csv_dir):
+    os.makedirs(csv_dir)
 
-
-# Función para generar fechas aleatorias
 def random_date(start, end):
-    return start + timedelta(days=random.randint(0, (end - start).days))
+	return start + timedelta(days=random.randint(0, (end-start).days))
 
+# Parámetros dinámicos para la generación de entidades
+try:
+    start_range = int(input("Ingrese el rango de inicio para la generación de entidades: "))
+    end_range = int(input("Ingrese el rango final para la generación de entidades: "))
+except Exception:
+    start_range, end_range = 1, 10  # Valores por defecto
+
+n = end_range - start_range + 1  # total de entidades
+num_relations = n - 1 if n > 1 else 1  # relaciones = N - 1
+
+# Rango fijo de fechas (10 años)
 start_date = datetime(2015, 1, 1)
 end_date = datetime(2025, 1, 1)
 
@@ -53,7 +68,7 @@ Componente
 """
 
 component_data = []
-component_names = [f"Component {i+1}" for i in range(10)]
+component_names = [f"Component {i}" for i in range(start_range, end_range+1)]
 
 for i, name in enumerate(component_names):
     # Seleccionar una categoría primero
@@ -123,9 +138,9 @@ Proveedor:
 """
 
 provider_data = []
-for i in range(10):
+for i in range(start_range, end_range+1):
     provider_data.append([
-        f"Provider {i+1}",
+        f"Provider {i}",
         random.randint(1, 5),
         random.choice([True, False]),
         random.sample(component_names, k=5),
@@ -153,9 +168,9 @@ Usuario
 """
 provider_names = provider_df["name"].tolist()
 user_data = []
-for i in range(10):
+for i in range(start_range, end_range+1):
     user_data.append([
-        f"User {i+1}",
+        f"User {i}",
         round(random.uniform(500, 5000), 2),
         random.choice([True, False]),
         random.sample(provider_names, k=10),
@@ -181,9 +196,10 @@ Reseña:
 - Fecha de Reseña (Fechas) 
 """
 review_data = []
-for i in range(10):
+review_titles = [f"Review Title {i}" for i in range(start_range, end_range+1)]
+for i, title in enumerate(review_titles):
     review_data.append([
-        f"Review Title {i+1}",
+        title,
         random.randint(1, 5),
         random.choice([True, False]),
         random.choice([True, False]),
@@ -262,7 +278,6 @@ unique_relations = {
 }
 
 # Número deseado de relaciones por tipo y límite de intentos por cada generación
-num_relations = 10
 attempts_limit = 10
 
 # PURCHASE (Usuario → Componente)
