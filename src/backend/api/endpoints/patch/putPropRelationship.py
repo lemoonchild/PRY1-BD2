@@ -12,7 +12,7 @@ class PutSingleRelationshipProperties(BaseModel):
     relationship_type: str
     from_identifier: str
     to_identifier: str
-    properties: Dict[str, str]
+    properties: Dict[str, Any]
 
 class PutMultipleRelationshipsProperties(BaseModel):
     from_label: str
